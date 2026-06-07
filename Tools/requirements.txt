@@ -1,0 +1,7 @@
+# Python deps for the host-side tools (orbit_to_unity.py bridge, keepalive.sh).
+# Install:  pip install -r Tools/requirements.txt
+# (The bridge re-emits the ORBIT app's NetMQ streams as UDP for Unity; only pyzmq is needed.
+#  mujoco is optional — only Tools/setup.sh uses it to re-vendor the native lib if it goes
+#  missing, but Assets/Plugins/mujoco.dylib is already committed.)
+pyzmq>=26
+mujoco==3.9.0   # optional; only for Tools/setup.sh re-vendoring the dylib
